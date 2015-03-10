@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "Texture3DScene.h"
+#include "test.h"
+#include "test4dym.h"
 
 USING_NS_CC;
 
@@ -40,14 +42,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
     //3d
-    director->setProjection(Director::Projection::_3D);
+    //director->setProjection(Director::Projection::_3D);
     director->setDepthTest(true);
 
     FileUtils::getInstance()->addSearchPath("res");
 
     // create a scene. it's an autorelease object
     //auto scene = HelloWorld::createScene();
-    auto scene = Texture3DScene::createScene();
+    //auto scene = Texture3DScene::createScene();
+    auto scene = Test4DymScene::createScene();
     // run
     director->runWithScene(scene);
 
